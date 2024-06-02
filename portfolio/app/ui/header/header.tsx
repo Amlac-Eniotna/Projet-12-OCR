@@ -6,7 +6,7 @@ export default function Header() {
     <div className="flex justify-center fixed bg-mauve-1 w-full z-10">
       <header className="font-thin flex justify-between max-w-screen-xl w-full p-2">
         <Logo />
-        <NavLink />
+        <NavLink className="hidden lg:flex lg:justify-center lg:items-center" />
       </header>
     </div>
   );

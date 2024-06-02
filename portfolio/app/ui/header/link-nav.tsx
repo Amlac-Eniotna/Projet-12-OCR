@@ -7,9 +7,9 @@ const links = [
   { name: 'Contact', href: '#contact' },
 ];
 
-export default function NavLink() {
+export default function NavLink({ className }: { className: string }) {
   return (
-    <nav className="flex justify-center items-center">
+    <nav className={`${className}`}>
       <ul className="list-none flex gap-6">
         {links.map((link) => {
           return (

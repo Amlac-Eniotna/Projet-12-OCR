@@ -3,7 +3,7 @@ import { playfair } from '@/app/ui/fonts';
 export default function MyName({ className }) {
   return (
     <h1
-      className={`${className} text-8xl ${playfair.className} text-mauve-11 relative overflow-hidden`}
+      className={`${className} lg:text-8xl text-4xl ${playfair.className} text-mauve-11 relative overflow-hidden whitespace-nowrap`}
     >
       <div className="relative appear-text">
         <span className="letter-weight-animation animation-delay-1">A</span>
