@@ -6,7 +6,7 @@ export default function Home() {
     <main>
       <section
         id="me"
-        className="pt-28 bg-mauve-2 h-screen lg:flex lg:items-center"
+        className="pt-28 dark:bg-mauve-2 bg-wmauve-1 h-screen lg:flex lg:items-center"
       >
         <div className="mx-auto lg:w-full max-w-7xl flex flex-col lg:flex-row justify-center items-center lg:justify-normal w-auto px-3">
           <Picture className="mb-3 mt-8 w-2/3 lg:w-96" />

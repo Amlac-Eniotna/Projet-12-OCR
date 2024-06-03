@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Picture({ className }) {
+export default function Picture({ className }: { className: string }) {
   return (
     <Image
       src="/me.jpg"

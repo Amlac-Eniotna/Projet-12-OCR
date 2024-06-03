@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${montserrat.className} bg-mauve-1 text-mauve-12 antialiased`}
+        className={`${montserrat.className} bg-wmauve-1 text-wmauve-12 dark:bg-mauve-1 dark:text-mauve-12 antialiased`}
       >
         <Header />
         {children}
