@@ -8,13 +8,13 @@ export default function Home() {
     <main>
       <section
         id="me"
-        className="h-screen snap-start snap-always bg-wmauve-1 pt-20 lg:flex lg:items-center lg:pt-28 dark:bg-mauve-2"
+        className="h-screen snap-start snap-always bg-wmauve-1 pt-20 xl:flex xl:items-center xl:pt-28 dark:bg-mauve-2"
       >
-        <div className="mx-auto flex h-full w-auto max-w-7xl flex-col items-center justify-evenly px-3 lg:w-full lg:flex-row lg:justify-normal">
-          <Picture className="mb-3 mt-8 w-2/3 max-w-[320px] lg:w-96" />
-          <div className="flex flex-col justify-center lg:ml-24">
+        <div className="mx-auto flex h-full w-auto max-w-7xl flex-col items-center justify-evenly px-3 xl:w-full xl:flex-row xl:justify-normal">
+          <Picture className="mb-3 mt-8 w-2/3 max-w-[320px] xl:w-96" />
+          <div className="flex flex-col justify-center xl:ml-24">
             <MyName className="mb-2" />
-            <p className="text-justify text-base font-light lg:text-start lg:text-3xl">
+            <p className="text-justify text-base font-light xl:text-start xl:text-3xl">
               Je suis développeur front-end junior, formé chez OpenClassrooms.
               Passionné par la programmation, le design et les nouvelles
               technologies, je me suis orienté vers le langage JS.
@@ -24,18 +24,16 @@ export default function Home() {
       </section>
       <section
         id="works"
-        className="min-h-screen snap-start snap-always bg-wmauve-2 pt-20 lg:pt-28 dark:bg-mauve-1"
+        className="min-h-screen snap-start snap-always bg-wmauve-2 pt-20 xl:pt-28 dark:bg-mauve-1"
       >
-        <div className="m-auto px-3 lg:max-w-7xl lg:px-0">
+        <div className="m-auto px-3 xl:max-w-7xl xl:px-0">
           <h2
-            className={`mb-2 text-4xl text-wmauve-11 lg:text-8xl dark:text-mauve-11 ${playfair.className} w-40 border-b-2 border-wmauve-11 font-black dark:border-mauve-11`}
+            className={`${playfair.className} mb-12 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 xl:w-96 xl:border-b-4 xl:text-8xl dark:border-mauve-11 dark:text-mauve-11`}
           >
             Works
           </h2>
-          <div className="flex min-w-0 flex-col items-center justify-center gap-8 lg:flex-row">
-            <Cards />
-          </div>
         </div>
+        <Cards />
       </section>
     </main>
   );
