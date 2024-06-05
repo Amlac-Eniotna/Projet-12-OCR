@@ -54,7 +54,7 @@ function Card({
 }) {
   return (
     <div
-      className={`${position} card-movement relative mx-3 h-[650px] max-h-[80vh] w-full overflow-hidden rounded-3xl bg-mauve-3 object-cover xl:w-[1080px] xl:min-w-[1080px]`}
+      className={`${position} card-movement relative mx-3 h-[650px] max-h-[80vh] w-full overflow-hidden rounded-3xl bg-mauve-3 object-cover xl:min-w-[1256px]`}
     >
       <Link href={link} className="absolute h-full w-full">
         <Image
@@ -88,13 +88,13 @@ export function Cards() {
   useEffect(() => {
     switch (selected) {
       case 0:
-        setPosition("xl:left-[1136px]");
+        setPosition("xl:left-[1312px]");
         break;
       case 1:
         setPosition("xl:left-[0px]");
         break;
       case 2:
-        setPosition("xl:left-[-1136px]");
+        setPosition("xl:left-[-1312px]");
         break;
     }
   }, [selected]);
