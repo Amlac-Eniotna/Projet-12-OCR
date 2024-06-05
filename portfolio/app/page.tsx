@@ -2,6 +2,7 @@ import Picture from "@/app/ui/me/picture";
 import MyName from "@/app/ui/me/my-name";
 import { Cards } from "@/app/ui/works/card";
 import { playfair } from "@/app/ui/fonts";
+import { Game } from "@/app/ui/techno/game";
 
 export default function Home() {
   return (
@@ -26,12 +27,14 @@ export default function Home() {
         id="works"
         className="min-h-screen snap-start snap-always bg-wmauve-2 pt-20 xl:pt-28 dark:bg-mauve-1"
       >
-        <div className="m-auto px-3 xl:max-w-7xl xl:px-0">
-          <h2
-            className={`${playfair.className} mb-12 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 xl:w-96 xl:border-b-4 xl:text-8xl dark:border-mauve-11 dark:text-mauve-11`}
-          >
-            Works
-          </h2>
+        <div className="m-auto xl:max-w-7xl xl:px-0">
+          <div className="px-3">
+            <h2
+              className={`${playfair.className} mb-8 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 xl:w-96 xl:border-b-4 xl:text-8xl dark:border-mauve-11 dark:text-mauve-11`}
+            >
+              Works
+            </h2>
+          </div>
         </div>
         <Cards />
       </section>
@@ -39,15 +42,19 @@ export default function Home() {
         id="techno"
         className="h-screen snap-start snap-always bg-wmauve-1 pt-20 xl:pt-28 dark:bg-mauve-2"
       >
-        <div className="m-auto px-3 xl:max-w-7xl xl:px-0">
-          <h2
-            className={`${playfair.className} mb-12 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 xl:w-96 xl:border-b-4 xl:text-8xl dark:border-mauve-11 dark:text-mauve-11`}
-          >
-            Techno
-          </h2>
+        <div className="m-auto xl:max-w-7xl xl:px-0">
+          <div className="mx-3">
+            <h2
+              className={`${playfair.className} mb-8 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 xl:w-96 xl:border-b-4 xl:text-8xl dark:border-mauve-11 dark:text-mauve-11`}
+            >
+              Techno
+            </h2>
+          </div>
         </div>
-        <div className="m-auto px-3 xl:max-w-7xl xl:px-0">
-          <p className="h-[650px] w-full rounded-3xl bg-slate-400">a</p>
+        <div className="m-auto xl:max-w-7xl xl:px-0">
+          <div className="mx-3">
+            <Game />
+          </div>
         </div>
       </section>
     </main>

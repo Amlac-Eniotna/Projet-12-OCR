@@ -64,12 +64,15 @@ function Card({
           className="absolute object-cover xl:w-[1080px]"
         />
       </Link>
-      <div className="absolute bottom-0 flex h-1/4 w-full justify-between bg-wmauve-4 opacity-90 xl:p-5 dark:bg-mauve-4">
+      <div className="absolute bottom-0 flex h-1/4 w-full justify-between bg-wmauve-4 p-5 opacity-90 xl:p-5 dark:bg-mauve-4">
         <div className="">
           <h2 className="xl:text-5xl">{title} :</h2>
           <p className="xl:text-2xl">{description}</p>
         </div>
-        <div className="grid grid-cols-4 grid-rows-2 gap-3" dir="rtl">
+        <div
+          className="grid grid-flow-row grid-cols-2 gap-3 xl:grid-cols-4 xl:grid-rows-2"
+          dir="rtl"
+        >
           {technos.map((techno) => {
             return <Techno key={techno + id} techno={techno} />;
           })}
@@ -85,13 +88,13 @@ export function Cards() {
   useEffect(() => {
     switch (selected) {
       case 0:
-        setPosition("left-[1124px]");
+        setPosition("xl:left-[1136px]");
         break;
       case 1:
-        setPosition("left-[0px]");
+        setPosition("xl:left-[0px]");
         break;
       case 2:
-        setPosition("left-[-1124px]");
+        setPosition("xl:left-[-1136px]");
         break;
     }
   }, [selected]);
@@ -112,13 +115,13 @@ export function Cards() {
             onClick={() => clickHandler(-1)}
             className="relative z-10 m-24 hidden h-24 w-24 cursor-pointer items-center justify-center overflow-hidden rounded-full border-[1px] border-wmauve-7 xl:flex dark:border-mauve-7"
           >
-            <Arrow className="relative right-1 z-10 h-full min-w-48 rotate-180 bg-wmauve-4/30 p-5 transition-colors hover:bg-wmauve-6 dark:bg-mauve-4/30 dark:hover:bg-mauve-6" />
+            <Arrow className="relative right-1 z-10 h-full min-w-48 rotate-180 bg-wmauve-4/30 p-5 transition-colors hover:bg-wmauve-6 active:bg-wmauve-8 dark:bg-mauve-4/30 dark:hover:bg-mauve-6 dark:active:bg-mauve-8" />
           </div>
           <div
             onClick={() => clickHandler(1)}
             className="relative z-10 m-24 hidden h-24 w-24 cursor-pointer items-center justify-center overflow-hidden rounded-full border-[1px] border-wmauve-7 xl:flex dark:border-mauve-7"
           >
-            <Arrow className="relative left-1 z-10 h-full min-w-48 bg-wmauve-4/30 p-5 transition-colors hover:bg-wmauve-6 dark:bg-mauve-4/30 dark:hover:bg-mauve-6" />
+            <Arrow className="relative left-1 z-10 h-full min-w-48 bg-wmauve-4/30 p-5 transition-colors hover:bg-wmauve-6 active:bg-wmauve-8 dark:bg-mauve-4/30 dark:hover:bg-mauve-6 dark:active:bg-mauve-8" />
           </div>
         </div>
       </div>
