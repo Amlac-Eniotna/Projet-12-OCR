@@ -35,6 +35,21 @@ export default function Home() {
         </div>
         <Cards />
       </section>
+      <section
+        id="techno"
+        className="h-screen snap-start snap-always bg-wmauve-1 pt-20 xl:pt-28 dark:bg-mauve-2"
+      >
+        <div className="m-auto px-3 xl:max-w-7xl xl:px-0">
+          <h2
+            className={`${playfair.className} mb-12 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 xl:w-96 xl:border-b-4 xl:text-8xl dark:border-mauve-11 dark:text-mauve-11`}
+          >
+            Techno
+          </h2>
+        </div>
+        <div className="m-auto px-3 xl:max-w-7xl xl:px-0">
+          <p className="h-[650px] w-full rounded-3xl bg-slate-400">a</p>
+        </div>
+      </section>
     </main>
   );
 }
