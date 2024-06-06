@@ -3,6 +3,7 @@ import MyName from "@/app/ui/me/my-name";
 import { Cards } from "@/app/ui/works/card";
 import { playfair } from "@/app/ui/fonts";
 import { Game } from "@/app/ui/techno/game";
+import { GridTechno } from "@/app/ui/techno/techno-grid";
 
 export default function Home() {
   return (
@@ -53,9 +54,25 @@ export default function Home() {
         </div>
         <div className="m-auto xl:max-w-7xl xl:px-0">
           <div className="mx-3">
-            <Game />
+            {/* <Game /> */}
+            <GridTechno />
           </div>
         </div>
+      </section>
+      <section
+        id="contact"
+        className="h-screen snap-start snap-always bg-wmauve-2 dark:bg-mauve-1"
+      >
+        <div className="h-[55vh] bg-wmauve-1 pt-20 xl:h-[75vh] xl:pt-28 dark:bg-mauve-2">
+          <div className="mx-3">
+            <h2
+              className={`${playfair.className} mb-8 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 xl:w-96 xl:border-b-4 xl:text-8xl dark:border-mauve-11 dark:text-mauve-11`}
+            >
+              Contact
+            </h2>
+          </div>
+        </div>
+        <footer className="h-[45vh] xl:h-[25vh]"></footer>
       </section>
     </main>
   );

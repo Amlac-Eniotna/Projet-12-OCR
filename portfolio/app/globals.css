@@ -85,3 +85,9 @@
 .card-movement {
   transition: left 0.5s;
 }
+
+.techno-movement {
+  transition:
+    left 10s,
+    right 10s;
+}

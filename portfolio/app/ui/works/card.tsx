@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Arrow } from "@/app/ui/works/arrow";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Techno } from "@/app/ui/works/techno";
+import { Techno } from "@/app/ui/works/techno-avatar";
 
 const fetch = [
   {
@@ -12,7 +12,7 @@ const fetch = [
     description: "ablablabla",
     img: "/image.png",
     alt: "titre du site",
-    technos: ["redux", "react", "next"],
+    technos: ["redux", "react", "nextjs"],
     link: "#",
   },
   {
@@ -20,7 +20,7 @@ const fetch = [
     description: "bblablabla",
     img: "/image.png",
     alt: "titre du site",
-    technos: ["redux", "react", "next"],
+    technos: ["redux", "react", "nextjs"],
     link: "#",
   },
   {
@@ -28,7 +28,7 @@ const fetch = [
     description: "cblablabla",
     img: "/image.png",
     alt: "titre du site",
-    technos: ["redux", "react", "next"],
+    technos: ["redux", "react", "nextjs"],
     link: "#",
   },
 ];
@@ -74,7 +74,9 @@ function Card({
           dir="rtl"
         >
           {technos.map((techno) => {
-            return <Techno key={techno + id} techno={techno} />;
+            return (
+              <Techno key={techno + id} techno={techno} className="size-14" />
+            );
           })}
         </div>
       </div>
@@ -110,7 +112,7 @@ export function Cards() {
   return (
     <div className="relative m-3 xl:m-0">
       <div className="absolute flex h-full w-full items-center justify-center">
-        <div className="absolute flex h-full w-full items-center justify-between xl:max-w-[1080px]">
+        <div className="absolute flex h-full w-full items-center justify-between xl:max-w-[1280px]">
           <div
             onClick={() => clickHandler(-1)}
             className="relative z-10 m-24 hidden h-24 w-24 cursor-pointer items-center justify-center overflow-hidden rounded-full border-[1px] border-wmauve-7 xl:flex dark:border-mauve-7"

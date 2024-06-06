@@ -1,0 +1,25 @@
+.animation {
+  animation: 20s linear infinite defilement;
+}
+
+@keyframes defilement {
+  from {
+    right: -336px;
+  }
+  to {
+    right: 336px;
+  }
+}
+
+.animationb {
+  animation: 20s linear infinite defilementb;
+}
+
+@keyframes defilementb {
+  from {
+    right: 336px;
+  }
+  to {
+    right: -336px;
+  }
+}
