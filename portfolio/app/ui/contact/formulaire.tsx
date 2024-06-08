@@ -1,3 +1,3 @@
 export function Formular() {
-  return;
+  return <div></div>;
 }

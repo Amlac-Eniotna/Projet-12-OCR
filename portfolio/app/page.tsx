@@ -4,6 +4,7 @@ import { Cards } from "@/app/ui/works/card";
 import { playfair } from "@/app/ui/fonts";
 import { Game } from "@/app/ui/techno/game";
 import { GridTechno } from "@/app/ui/techno/techno-grid";
+import { Formular } from "@/app/ui/contact/formulaire";
 
 export default function Home() {
   return (
@@ -72,6 +73,7 @@ export default function Home() {
                 Contact
               </h2>
             </div>
+            {/* <Formular /> */}
           </div>
         </div>
         <footer className="h-[45vh] xl:h-[25vh]"></footer>
