@@ -1,0 +1,9 @@
+/* .inputcolor {
+  background-color: rgba(94, 81, 194, 0.349);
+} */
+
+@media (prefers-color-scheme: dark) {
+  .inputcolor {
+    background-color: rgba(94, 81, 194, 0.349);
+  }
+}

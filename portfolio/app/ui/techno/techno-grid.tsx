@@ -8,7 +8,7 @@ const technoslist = [
   "tailwind",
   "typescript",
 ];
-const repeat = [0, 1, 2, 3, 4];
+const repeat = [0, 1, 2];
 
 export function GridTechno() {
   function shuffle(array: string[]) {
@@ -22,6 +22,7 @@ export function GridTechno() {
     <div
       className={`relative flex h-[70vh] w-full flex-col items-center justify-evenly overflow-hidden rounded-3xl bg-wmauve-3 xl:h-[650px] xl:p-8 dark:bg-mauve-3`}
     >
+      <div className="absolute z-30">mettre un hover</div>
       {repeat.map((n) => {
         shuffle(technos);
         return (
