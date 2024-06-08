@@ -13,6 +13,10 @@ export function GridTechno() {
           <div
             key={n}
             className={`${n & 1 ? style.animation : style.animationb} relative flex flex-nowrap justify-between gap-4`}
+            style={{
+              animationDuration: `${Math.floor(Math.random() * 20) + 10}s`,
+              animationDelay: `${Math.floor(Math.random() * 30) - 31}s`,
+            }}
           >
             {technos.map((techno) => {
               return (
