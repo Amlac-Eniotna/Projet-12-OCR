@@ -61,8 +61,8 @@ function HoverTechno() {
     <div
       className={`${style.bghover} absolute z-30 flex h-full w-full items-center justify-center p-4 transition-all xl:text-2xl`}
     >
-      <div className="flex flex-col gap-8 xl:flex-row xl:gap-16">
-        <div className="xl:w-[180px]">
+      <div className="flex flex-col divide-y divide-wmauve-12 xl:flex-row xl:divide-x xl:divide-y-0 dark:divide-mauve-12">
+        <div className="py-4 xl:px-12 xl:py-0">
           <h3 className="text-xl font-black xl:mb-2 xl:text-3xl">
             Front-end :
           </h3>
@@ -71,13 +71,13 @@ function HoverTechno() {
             <li>Redux</li>
           </ul>
         </div>
-        <div className="xl:w-[180px]">
+        <div className="py-4 xl:px-12 xl:py-0">
           <h3 className="text-xl font-black xl:mb-2 xl:text-3xl">Back-end :</h3>
           <ul>
             <li>NextJS</li>
           </ul>
         </div>
-        <div className="xl:w-[180px]">
+        <div className="py-4 xl:px-12 xl:py-0">
           <h3 className="text-xl font-black xl:mb-2 xl:text-3xl">CSS :</h3>
           <ul>
             <li>Sass</li>

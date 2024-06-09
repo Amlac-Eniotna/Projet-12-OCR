@@ -24,15 +24,15 @@
   }
 }
 .bghover {
-  background-color: rgba(51, 41, 126, 0.8);
-  text-shadow:
-    0px 2px 5px black,
-    0px 0px 10px black,
-    0px 0px 10px black;
+  background-color: #f0f1ffec;
 }
 
-@media (min-width: 1280px) {
+@media (prefers-color-scheme: dark) {
   .bghover {
-    background-color: rgba(51, 42, 121, 0.8);
+    background-color: rgba(51, 41, 126, 0.8);
+    text-shadow:
+      0px 2px 5px black,
+      0px 0px 10px black,
+      0px 0px 10px black;
   }
 }
