@@ -23,13 +23,16 @@
     right: -336px;
   }
 }
-.a {
-  background-color: #241e4ed3;
-}
 .bghover {
-  background-color: rgba(94, 81, 194, 0.8);
+  background-color: rgba(51, 41, 126, 0.8);
   text-shadow:
     0px 2px 5px black,
     0px 0px 10px black,
     0px 0px 10px black;
+}
+
+@media (min-width: 1280px) {
+  .bghover {
+    background-color: rgba(51, 42, 121, 0.8);
+  }
 }
