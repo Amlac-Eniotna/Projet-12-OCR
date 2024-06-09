@@ -23,3 +23,13 @@
     right: -336px;
   }
 }
+.a {
+  background-color: #241e4ed3;
+}
+.bghover {
+  background-color: rgba(94, 81, 194, 0.8);
+  text-shadow:
+    0px 2px 5px black,
+    0px 0px 10px black,
+    0px 0px 10px black;
+}

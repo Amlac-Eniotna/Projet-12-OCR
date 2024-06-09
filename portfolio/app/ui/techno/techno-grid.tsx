@@ -9,6 +9,7 @@ const technoslist = [
   "typescript",
 ];
 const repeat = [0, 1, 2];
+const repeatListTechnos = [0, 1, 2];
 
 export function GridTechno() {
   function shuffle(array: string[]) {
@@ -18,11 +19,14 @@ export function GridTechno() {
     }
   }
   let technos = technoslist;
+
+  for (let i = 0; i < 3; i++) {}
+
   return (
     <div
       className={`relative flex h-[70vh] w-full flex-col items-center justify-evenly overflow-hidden rounded-3xl bg-wmauve-3 xl:h-[650px] xl:p-8 dark:bg-mauve-3`}
     >
-      <div className="absolute z-30">mettre un hover</div>
+      <HoverTechno />
       {repeat.map((n) => {
         shuffle(technos);
         return (
@@ -34,36 +38,51 @@ export function GridTechno() {
               animationDelay: `${Math.floor(Math.random() * 30) - 31}s`,
             }}
           >
-            {technos.map((techno) => {
-              return (
-                <Techno
-                  className="size-24"
-                  techno={techno}
-                  key={techno + "0"}
-                />
-              );
-            })}
-            {technos.map((techno) => {
-              return (
-                <Techno
-                  className="size-24"
-                  techno={techno}
-                  key={techno + "1"}
-                />
-              );
-            })}
-            {technos.map((techno) => {
-              return (
-                <Techno
-                  className="size-24"
-                  techno={techno}
-                  key={techno + "2"}
-                />
-              );
-            })}
+            {repeatListTechnos.map(() =>
+              technos.map((techno, i) => {
+                return (
+                  <Techno
+                    className="size-24"
+                    techno={techno}
+                    key={techno + i}
+                  />
+                );
+              }),
+            )}
           </div>
         );
       })}
+    </div>
+  );
+}
+
+function HoverTechno() {
+  return (
+    <div
+      className={`${style.bghover} absolute z-30 flex h-full w-full items-center justify-center p-4 transition-all xl:text-2xl xl:opacity-0 xl:hover:opacity-100`}
+    >
+      <div className="flex flex-col gap-8 xl:flex-row xl:gap-16">
+        <div className="xl:w-[180px]">
+          <h3 className="mb-2 text-xl font-black xl:text-3xl">Front-end :</h3>
+          <ul>
+            <li>React</li>
+            <li>Redux</li>
+          </ul>
+        </div>
+        <div className="xl:w-[180px]">
+          <h3 className="mb-2 text-xl font-black xl:text-3xl">Back-end :</h3>
+          <ul>
+            <li>NextJS</li>
+          </ul>
+        </div>
+        <div className="xl:w-[180px]">
+          <h3 className="mb-2 text-xl font-black xl:text-3xl">CSS :</h3>
+          <ul>
+            <li>Sass</li>
+            <li>Tailwind</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
