@@ -73,7 +73,7 @@ export default function Home() {
                 Contact
               </h2>
             </div>
-            <div className="mx-3 flex h-full flex-col">
+            <div className="relative mx-3 flex h-full flex-col">
               <Formular />
             </div>
           </div>
