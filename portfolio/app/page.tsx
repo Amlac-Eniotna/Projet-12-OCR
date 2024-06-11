@@ -78,7 +78,29 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <footer className="max-h-[45vh] xl:h-[25vh]"></footer>
+        <footer className="flex max-h-[45vh] flex-col items-center p-3 xl:h-[25vh]">
+          <p className="mb-6 mt-3">
+            © Copyright 2024 | Antoine CALMA | Tous droits réservés.
+          </p>
+          <div>
+            <h3 className="mb-1 text-xl font-semibold">Réseaux :</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/antoine-calma/"
+                  target="_blank"
+                >
+                  Linkedin
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Amlac-Eniotna" target="_blank">
+                  Github
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
       </section>
     </main>
   );

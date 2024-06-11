@@ -64,7 +64,7 @@ function Card({
           className="absolute object-cover xl:w-[1080px]"
         />
       </Link>
-      <div className="absolute bottom-0 flex h-1/4 w-full justify-between bg-wmauve-4 p-5 opacity-90 xl:p-5 dark:bg-mauve-4">
+      <div className="absolute bottom-0 flex h-1/4 w-full justify-between bg-wmauve-2 p-5 opacity-90 xl:p-5 dark:bg-mauve-4">
         <div className="">
           <h2 className="xl:text-5xl">{title} :</h2>
           <p className="xl:text-2xl">{description}</p>
@@ -117,13 +117,13 @@ export function Cards() {
             onClick={() => clickHandler(-1)}
             className="relative z-10 m-24 hidden h-24 w-24 cursor-pointer items-center justify-center overflow-hidden rounded-full border-[1px] border-wmauve-7 xl:flex dark:border-mauve-7"
           >
-            <Arrow className="relative right-1 z-10 h-full min-w-48 rotate-180 bg-wmauve-4/30 p-5 transition-colors hover:bg-wmauve-6 active:bg-wmauve-8 dark:bg-mauve-4/30 dark:hover:bg-mauve-6 dark:active:bg-mauve-8" />
+            <Arrow className="relative right-1 z-10 h-full min-w-48 rotate-180 bg-wmauve-4/30 p-5 transition-colors hover:bg-wmauve-5 active:bg-wmauve-8 dark:bg-mauve-4/30 dark:hover:bg-mauve-6 dark:active:bg-mauve-8" />
           </div>
           <div
             onClick={() => clickHandler(1)}
             className="relative z-10 m-24 hidden h-24 w-24 cursor-pointer items-center justify-center overflow-hidden rounded-full border-[1px] border-wmauve-7 xl:flex dark:border-mauve-7"
           >
-            <Arrow className="relative left-1 z-10 h-full min-w-48 bg-wmauve-4/30 p-5 transition-colors hover:bg-wmauve-6 active:bg-wmauve-8 dark:bg-mauve-4/30 dark:hover:bg-mauve-6 dark:active:bg-mauve-8" />
+            <Arrow className="relative left-1 z-10 h-full min-w-48 bg-wmauve-4/30 p-5 transition-colors hover:bg-wmauve-5 active:bg-wmauve-8 dark:bg-mauve-4/30 dark:hover:bg-mauve-6 dark:active:bg-mauve-8" />
           </div>
         </div>
       </div>

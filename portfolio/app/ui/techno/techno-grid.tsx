@@ -26,7 +26,7 @@ export function GridTechno() {
     <div
       className={`relative flex h-[70vh] w-full flex-col items-center justify-evenly gap-4 overflow-hidden rounded-3xl bg-wmauve-3 xl:h-[650px] xl:p-8 dark:bg-mauve-3`}
     >
-      <HoverTechno />
+      <OverlayTechno />
       {repeat.map((n) => {
         shuffle(technos);
         return (
@@ -56,14 +56,14 @@ export function GridTechno() {
   );
 }
 
-function HoverTechno() {
+function OverlayTechno() {
   return (
     <div
       className={`${style.bghover} absolute z-30 flex h-full w-full items-center justify-center p-4 transition-all xl:text-2xl`}
     >
       <div className="flex flex-col divide-y divide-wmauve-12 xl:flex-row xl:divide-x xl:divide-y-0 dark:divide-mauve-12">
         <div className="py-4 xl:px-12 xl:py-0">
-          <h3 className="text-xl font-black xl:mb-2 xl:text-3xl">
+          <h3 className="text-xl font-semibold xl:mb-2 xl:text-3xl">
             Front-end :
           </h3>
           <ul>
@@ -72,13 +72,15 @@ function HoverTechno() {
           </ul>
         </div>
         <div className="py-4 xl:px-12 xl:py-0">
-          <h3 className="text-xl font-black xl:mb-2 xl:text-3xl">Back-end :</h3>
+          <h3 className="text-xl font-semibold xl:mb-2 xl:text-3xl">
+            Back-end :
+          </h3>
           <ul>
             <li>NextJS</li>
           </ul>
         </div>
         <div className="py-4 xl:px-12 xl:py-0">
-          <h3 className="text-xl font-black xl:mb-2 xl:text-3xl">CSS :</h3>
+          <h3 className="text-xl font-semibold xl:mb-2 xl:text-3xl">CSS :</h3>
           <ul>
             <li>Sass</li>
             <li>Tailwind</li>
