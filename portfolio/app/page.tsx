@@ -64,7 +64,7 @@ export default function Home() {
         id="contact"
         className="h-screen snap-start snap-always bg-wmauve-2 dark:bg-mauve-1"
       >
-        <div className="min-h-[55vh] bg-wmauve-1 pt-20 xl:h-[75vh] xl:pt-28 dark:bg-mauve-2">
+        <div className="min-h-[75vh] bg-wmauve-1 pt-20 xl:h-[75vh] xl:pt-28 dark:bg-mauve-2">
           <div className="m-auto flex h-full flex-col xl:max-w-7xl">
             <div className="mx-3">
               <h2
@@ -78,7 +78,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <footer className="flex max-h-[45vh] flex-col items-center p-3 xl:h-[25vh]">
+        <footer className="flex max-h-[45vh] snap-end snap-always flex-col items-center p-3 xl:h-[25vh]">
           <p className="mb-6 mt-3">
             © Copyright 2024 | Antoine CALMA | Tous droits réservés.
           </p>
