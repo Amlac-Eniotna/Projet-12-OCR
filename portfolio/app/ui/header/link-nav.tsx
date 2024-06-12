@@ -1,13 +1,15 @@
 import Link from "next/link";
 
-const links = [
-  { name: "Moi", href: "/#me" },
-  { name: "Projets", href: "/#works" },
-  { name: "Technos", href: "/#techno" },
-  { name: "Contact", href: "/#contact" },
-];
-
-export default function NavLink({ className }: { className: string }) {
+export default function NavLink({
+  className,
+  links,
+}: {
+  className: string;
+  links: {
+    name: string;
+    href: string;
+  }[];
+}) {
   return (
     <nav className={`${className}`}>
       <ul className="flex list-none gap-6">
