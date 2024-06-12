@@ -24,7 +24,7 @@ export function GridTechno() {
 
   return (
     <div
-      className={`relative flex h-[70vh] w-full flex-col items-center justify-evenly gap-4 overflow-hidden rounded-3xl bg-wmauve-3 xl:h-[650px] xl:p-8 dark:bg-mauve-3`}
+      className={`relative flex h-[75vh] w-full flex-col items-center justify-evenly gap-4 overflow-hidden rounded-3xl bg-wmauve-3 xl:h-[650px] xl:p-8 dark:bg-mauve-3`}
     >
       <OverlayTechno />
       {repeat.map((n) => {

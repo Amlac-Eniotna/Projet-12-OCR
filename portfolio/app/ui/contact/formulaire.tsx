@@ -15,6 +15,7 @@ export function Formular() {
     e.preventDefault();
     setSending(true);
     emailjs
+      //@ts-ignore
       .sendForm("service_dvb34wj", "template_qhr7vid", form.current, {
         publicKey: "szMxXCIOYUGW93kBL",
       })
@@ -47,9 +48,12 @@ export function Formular() {
         onSubmit={sendEmail}
         className="flex h-full flex-col gap-4 xl:gap-6"
       >
-        <div className="flex flex-col justify-between gap-4 xl:flex-row xl:gap-6">
+        <div className="flex flex-col justify-between gap-2 xl:flex-row xl:gap-6">
           <div className="w-full">
-            <label className="whitespace-nowrap text-xl" htmlFor="email">
+            <label
+              className="whitespace-nowrap text-sm xl:text-xl"
+              htmlFor="email"
+            >
               Email :
             </label>
             <input
@@ -57,11 +61,14 @@ export function Formular() {
               name="email"
               id="email"
               required
-              className={`${styles.inputcolor} mt-2 w-full rounded bg-wmauve-2 p-2 text-2xl outline outline-2 outline-wmauve-4 focus:outline-wmauve-11 dark:outline-mauve-6 dark:focus:outline-mauve-11`}
+              className={`${styles.inputcolor} mt-2 w-full rounded bg-wmauve-2 p-1 text-base outline outline-2 outline-wmauve-4 focus:outline-wmauve-11 xl:p-2 xl:text-xl dark:outline-mauve-6 dark:focus:outline-mauve-11`}
             ></input>
           </div>
           <div className="w-full">
-            <label className="whitespace-nowrap text-xl" htmlFor="nom">
+            <label
+              className="whitespace-nowrap text-sm xl:text-xl"
+              htmlFor="name"
+            >
               Nom complet :
             </label>
             <input
@@ -69,12 +76,15 @@ export function Formular() {
               name="name"
               id="name"
               required
-              className={`${styles.inputcolor} mt-2 w-full rounded bg-wmauve-2 p-2 text-2xl outline outline-2 outline-wmauve-4 focus:outline-wmauve-11 dark:outline-mauve-6 dark:focus:outline-mauve-11`}
+              className={`${styles.inputcolor} mt-2 w-full rounded bg-wmauve-2 p-1 text-base outline outline-2 outline-wmauve-4 focus:outline-wmauve-11 xl:p-2 xl:text-xl dark:outline-mauve-6 dark:focus:outline-mauve-11`}
             ></input>
           </div>
         </div>
         <div className="w-full">
-          <label className="whitespace-nowrap text-xl" htmlFor="objet">
+          <label
+            className="whitespace-nowrap text-sm xl:text-xl"
+            htmlFor="objet"
+          >
             Objet :
           </label>
           <input
@@ -82,24 +92,27 @@ export function Formular() {
             name="objet"
             id="objet"
             required
-            className={`${styles.inputcolor} mt-2 w-full rounded bg-wmauve-2 p-2 text-2xl outline outline-2 outline-wmauve-4 focus:outline-wmauve-11 dark:outline-mauve-6 dark:focus:outline-mauve-11`}
+            className={`${styles.inputcolor} mt-2 w-full rounded bg-wmauve-2 p-1 text-base outline outline-2 outline-wmauve-4 focus:outline-wmauve-11 xl:p-2 xl:text-xl dark:outline-mauve-6 dark:focus:outline-mauve-11`}
           ></input>
         </div>
         <div className="flex h-full flex-col">
-          <label className="whitespace-nowrap text-xl" htmlFor="message">
+          <label
+            className="whitespace-nowrap text-sm xl:text-xl"
+            htmlFor="message"
+          >
             Message :
           </label>
           <textarea
             name="message"
             id="message"
             required
-            className={`${styles.inputcolor} mt-2 h-full min-h-fit w-full resize-none rounded bg-wmauve-2 p-2 text-2xl outline outline-2 outline-wmauve-4 focus:outline-wmauve-11 dark:outline-mauve-6 dark:focus:outline-mauve-11`}
+            className={`${styles.inputcolor} xl:min-h-auto mt-2 h-full min-h-28 w-full resize-none rounded bg-wmauve-2 p-1 text-base outline outline-2 outline-wmauve-4 focus:outline-wmauve-11 xl:p-2 xl:text-xl dark:outline-mauve-6 dark:focus:outline-mauve-11`}
           ></textarea>
         </div>
         <div className="flex justify-end">
           <button
             type="submit"
-            className="mb-4 rounded bg-wmauve-9 px-24 py-2 text-2xl text-wmauve-1 xl:mb-6 dark:bg-mauve-9"
+            className="mb-2 rounded bg-wmauve-9 p-1 px-24 py-2 text-base text-wmauve-1 xl:mb-6 xl:text-2xl dark:bg-mauve-9"
           >
             {sending ? "Envoi..." : "Envoyer"}
           </button>
