@@ -19,7 +19,16 @@ export function NavMobile({
     <>
       <nav className={`${className}`}>
         <div className={`${style.menumobile} h-8`}>
-          <input type="checkbox" onChange={() => setOpened(!opened)} />
+          <label className="sr-only" htmlFor="menu">
+            Menu
+          </label>
+          <input
+            name="menu"
+            id="menu"
+            type="checkbox"
+            checked={opened}
+            onChange={() => setOpened(!opened)}
+          />
           <span className="bg-wmauve-12 dark:bg-mauve-12"></span>
           <span className="bg-wmauve-12 dark:bg-mauve-12"></span>
           <span className="bg-wmauve-12 dark:bg-mauve-12"></span>

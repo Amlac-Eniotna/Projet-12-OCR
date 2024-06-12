@@ -18,10 +18,9 @@ export default function Home() {
           <div className="flex flex-col justify-center xl:ml-24">
             <MyName className="mb-2" />
             <p className="text-justify text-base font-light xl:text-start xl:text-3xl">
-              Je suis développeur front-end junior, formé chez OpenClassrooms.
-              Passionné par la programmation, le design et les nouvelles
-              technologies, je me suis orienté vers le langage JS. En dehors du
-              développement, j'aime jouer du violon et dessiner.
+              {
+                "Je suis développeur front-end junior, formé chez OpenClassrooms. Passionné par la programmation, le design et les nouvelles technologies, je me suis orienté vers le langage JS. En dehors du développement, j'aime jouer du violon et dessiner."
+              }
             </p>
           </div>
         </div>
@@ -79,7 +78,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <footer className="flex max-h-[45dvh] snap-end snap-always flex-col items-center p-3 xl:h-[25dvh]">
+        <footer className="flex max-h-[45dvh] flex-col items-center p-3 xl:h-[25dvh]">
           <p className="mb-6 mt-3">
             © Copyright 2024 | Antoine CALMA | Tous droits réservés.
           </p>
