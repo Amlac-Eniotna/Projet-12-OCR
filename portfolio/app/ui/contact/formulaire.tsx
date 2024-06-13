@@ -15,10 +15,15 @@ export function Formular() {
     e.preventDefault();
     setSending(true);
     emailjs
-      //@ts-ignore
-      .sendForm("service_dvb34wj", "template_qhr7vid", form.current, {
-        publicKey: "szMxXCIOYUGW93kBL",
-      })
+      .sendForm(
+        //@ts-ignore
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+        },
+      )
       .then(
         () => {
           setModalMsg("Message Envoyer !");
@@ -42,7 +47,6 @@ export function Formular() {
       {opened ? (
         <Modal onClick={() => setOpened(false)} msg={modalMsg} />
       ) : null}
-
       <form
         ref={form}
         onSubmit={sendEmail}

@@ -2,7 +2,7 @@
 
 import style from "@/app/ui/header/mobile-nav.module.css";
 import Link from "next/link";
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 export function NavMobile({
   className,
   links,
