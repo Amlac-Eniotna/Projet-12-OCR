@@ -13,7 +13,6 @@ export function GridTechno() {
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
-  // let technos = technos;
 
   for (let i = 0; i < 3; i++) {}
 
