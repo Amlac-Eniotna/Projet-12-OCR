@@ -32,7 +32,7 @@ export default function Home() {
         <div className="m-auto xl:max-w-7xl xl:px-0">
           <div className="px-3">
             <h2
-              className={`${playfair.className} mb-2 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 xl:mb-8 xl:w-96 xl:border-b-4 xl:text-8xl dark:border-mauve-11 dark:text-mauve-11`}
+              className={`${playfair.className} mb-2 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 xl:mb-6 xl:w-96 xl:border-b-4 xl:text-6xl dark:border-mauve-11 dark:text-mauve-11`}
             >
               Works
             </h2>
@@ -47,7 +47,7 @@ export default function Home() {
         <div className="m-auto xl:max-w-7xl xl:px-0">
           <div className="mx-3">
             <h2
-              className={`${playfair.className} mb-2 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 xl:mb-8 xl:w-96 xl:border-b-4 xl:text-8xl dark:border-mauve-11 dark:text-mauve-11`}
+              className={`${playfair.className} mb-2 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 xl:mb-6 xl:w-96 xl:border-b-4 xl:text-6xl dark:border-mauve-11 dark:text-mauve-11`}
             >
               Techno
             </h2>
@@ -68,7 +68,7 @@ export default function Home() {
           <div className="m-auto flex h-full flex-col xl:max-w-7xl">
             <div className="mx-3">
               <h2
-                className={`${playfair.className} mb-2 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 xl:mb-8 xl:w-96 xl:border-b-4 xl:text-8xl dark:border-mauve-11 dark:text-mauve-11`}
+                className={`${playfair.className} mb-2 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 xl:mb-6 xl:w-96 xl:border-b-4 xl:text-6xl dark:border-mauve-11 dark:text-mauve-11`}
               >
                 Contact
               </h2>

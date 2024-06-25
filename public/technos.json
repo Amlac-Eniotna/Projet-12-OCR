@@ -10,7 +10,8 @@
     "css",
     "vite",
     "react-router",
-    "lighthouse"
+    "lighthouse",
+    "javascript"
   ],
   "technoslist": [
     {
@@ -27,7 +28,7 @@
     },
     {
       "zone": "Autre",
-      "technos": ["Lighthouse", "Typescript"]
+      "technos": ["Lighthouse", "Javascript", "Typescript"]
     }
   ]
 }

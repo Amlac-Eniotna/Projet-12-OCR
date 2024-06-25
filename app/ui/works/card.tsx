@@ -12,6 +12,7 @@ const fetch: {
   img: string;
   alt: string;
   technos: string[];
+  github: string;
   link: string;
 }[] = require("@/public/works.json").works;
 
@@ -23,6 +24,7 @@ function Card({
   alt,
   link,
   position,
+  github,
   id,
 }: {
   title: string;
@@ -32,34 +34,53 @@ function Card({
   alt: string;
   link: string;
   position: string;
+  github: string;
   id: number;
 }) {
   return (
     <div
-      className={`${position} card-movement relative mx-3 h-[650px] max-h-[80vh] w-full overflow-hidden rounded-3xl bg-mauve-3 object-cover xl:min-w-[1256px]`}
+      className={`${position} card-movement relative mx-3 h-[690px] max-h-[82vh] w-full overflow-hidden rounded-3xl border border-solid border-wmauve-5 bg-mauve-3 object-cover xl:min-w-[1256px] dark:border-none`}
     >
       <Link href={link} className="absolute h-full w-full">
         <Image
           src={img}
           alt={alt}
           fill={true}
-          className="absolute object-cover xl:w-[1080px]"
+          className="absolute object-cover object-left-top xl:w-[1080px]"
         />
       </Link>
-      <div className="absolute bottom-0 flex h-1/4 w-full justify-between bg-wmauve-2 p-5 opacity-90 xl:p-5 dark:bg-mauve-4">
-        <div className="">
-          <h2 className="xl:text-5xl">{title} :</h2>
-          <p className="xl:text-2xl">{description}</p>
+      <div
+        className="absolute bottom-0 flex h-1/4 w-full justify-between bg-wmauve-2 p-5 opacity-90 xl:p-5 dark:bg-mauve-4"
+        style={{
+          textShadow:
+            "0px 2px 5px black, 0px 0px 10px black, 0px 0px 10px black",
+        }}
+      >
+        <div>
+          <h2 className="text-base font-medium xl:text-3xl">{title} :</h2>
+          <p className="text-xs xl:text-xl">{description}</p>
         </div>
-        <div
-          className="grid grid-flow-row grid-cols-2 gap-3 xl:grid-cols-4 xl:grid-rows-2"
-          dir="rtl"
-        >
-          {technos.map((techno) => {
-            return (
-              <Techno key={techno + id} techno={techno} className="size-14" />
-            );
-          })}
+        <div>
+          <div
+            className="mb-2 grid min-w-max grid-flow-row grid-cols-2 gap-1 xl:mb-0 xl:grid-cols-4 xl:grid-rows-2 xl:gap-3"
+            dir="rtl"
+          >
+            {technos.map((techno) => {
+              return (
+                <Techno
+                  key={techno + id}
+                  techno={techno}
+                  className="size-9 xl:size-12"
+                />
+              );
+            })}
+          </div>
+          <Link
+            href={github}
+            className="block w-full whitespace-nowrap text-right text-indigo-400 underline"
+          >
+            lien github
+          </Link>
         </div>
       </div>
     </div>
@@ -121,6 +142,7 @@ export function Cards() {
               technos={dataCard.technos}
               img={dataCard.img}
               alt={dataCard.alt}
+              github={dataCard.github}
               id={i}
             />
           );
