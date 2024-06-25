@@ -5,6 +5,7 @@ import { Arrow } from "@/app/ui/works/arrow";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Techno } from "@/app/ui/works/techno-avatar";
+import style from "@/app/ui/works/card.module.css";
 
 const fetch: {
   title: string;
@@ -39,7 +40,7 @@ function Card({
 }) {
   return (
     <div
-      className={`${position} card-movement relative mx-3 h-[690px] max-h-[82vh] w-full overflow-hidden rounded-3xl border border-solid border-wmauve-5 bg-mauve-3 object-cover xl:min-w-[1256px] dark:border-none`}
+      className={`${position} card-movement relative mx-3 h-[690px] max-h-[82vh] w-full overflow-hidden rounded-3xl bg-wmauve-3 object-cover shadow-2xl xl:min-w-[1256px] dark:border-none dark:bg-mauve-3 dark:shadow-none`}
     >
       <Link href={link} className="absolute h-full w-full">
         <Image
@@ -50,11 +51,7 @@ function Card({
         />
       </Link>
       <div
-        className="absolute bottom-0 flex h-1/4 w-full justify-between bg-wmauve-2 p-5 opacity-90 xl:p-5 dark:bg-mauve-4"
-        style={{
-          textShadow:
-            "0px 2px 5px black, 0px 0px 10px black, 0px 0px 10px black",
-        }}
+        className={`${style.textshadow} absolute bottom-0 flex h-1/4 w-full justify-between bg-wmauve-2 p-5 opacity-90 xl:p-5 dark:bg-mauve-4`}
       >
         <div>
           <h2 className="text-base font-medium xl:text-3xl">{title} :</h2>
@@ -130,7 +127,7 @@ export function Cards() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-8 overflow-hidden xl:flex-row">
+      <div className="flex flex-col items-center justify-center gap-8 overflow-x-clip xl:flex-row">
         {fetch.map((dataCard, i) => {
           return (
             <Card
