@@ -1,0 +1,29 @@
+{
+  "works": [
+    {
+      "title": "Responsive IMG",
+      "description": "Responsive img permet de rapidement créer plusieurs résolution d'une même image très rapidement et ",
+      "img": "/image.png",
+      "alt": "Responsive IMG",
+      "technos": ["redux", "react", "nextjs", "typescript"],
+      "github": "",
+      "link": "https://responsive-img.com"
+    },
+    {
+      "title": "titreb",
+      "description": "bblablabla",
+      "img": "/image.png",
+      "alt": "titre du site",
+      "technos": ["redux", "react", "nextjs"],
+      "link": "#"
+    },
+    {
+      "title": "titrec",
+      "description": "cblablabla",
+      "img": "/image.png",
+      "alt": "titre du site",
+      "technos": ["redux", "react", "nextjs"],
+      "link": "#"
+    }
+  ]
+}

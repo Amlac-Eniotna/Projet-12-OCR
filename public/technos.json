@@ -1,0 +1,33 @@
+{
+  "technos": [
+    "redux",
+    "react",
+    "nextjs",
+    "sass",
+    "tailwind",
+    "typescript",
+    "html",
+    "css",
+    "vite",
+    "react-router",
+    "lighthouse"
+  ],
+  "technoslist": [
+    {
+      "zone": "Front-end",
+      "technos": ["HTML", "React", "Redux", "React Router"]
+    },
+    {
+      "zone": "Back-end",
+      "technos": ["NextJS"]
+    },
+    {
+      "zone": "CSS",
+      "technos": ["CSS", "Sass", "Tailwind"]
+    },
+    {
+      "zone": "Autre",
+      "technos": ["Lighthouse", "Typescript"]
+    }
+  ]
+}

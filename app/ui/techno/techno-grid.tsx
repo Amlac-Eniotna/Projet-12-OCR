@@ -1,15 +1,10 @@
 import style from "@/app/ui/techno/animation-techno.module.css";
 import { Techno } from "@/app/ui/works/techno-avatar";
-const technoslist = [
-  "redux",
-  "react",
-  "nextjs",
-  "sass",
-  "tailwind",
-  "typescript",
-];
+const technos: string[] = require("@/public/technos.json").technos;
+const technoslist: technosListType =
+  require("@/public/technos.json").technoslist;
 const repeat = [0, 1, 2, 3, 4];
-const repeatListTechnos = [0, 1, 2];
+const repeatListTechnos = [0, 1];
 
 export function GridTechno() {
   function shuffle(array: string[]) {
@@ -18,7 +13,7 @@ export function GridTechno() {
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
-  let technos = technoslist;
+  // let technos = technos;
 
   for (let i = 0; i < 3; i++) {}
 
@@ -62,31 +57,26 @@ function OverlayTechno() {
       className={`${style.bghover} absolute z-30 flex h-full w-full items-center justify-center p-4 transition-all xl:text-2xl`}
     >
       <div className="flex flex-col divide-y divide-wmauve-12 xl:flex-row xl:divide-x xl:divide-y-0 dark:divide-mauve-12">
-        <div className="py-4 xl:px-12 xl:py-0">
-          <h3 className="text-xl font-semibold xl:mb-2 xl:text-3xl">
-            Front-end :
-          </h3>
-          <ul>
-            <li>React</li>
-            <li>Redux</li>
-          </ul>
-        </div>
-        <div className="py-4 xl:px-12 xl:py-0">
-          <h3 className="text-xl font-semibold xl:mb-2 xl:text-3xl">
-            Back-end :
-          </h3>
-          <ul>
-            <li>NextJS</li>
-          </ul>
-        </div>
-        <div className="py-4 xl:px-12 xl:py-0">
-          <h3 className="text-xl font-semibold xl:mb-2 xl:text-3xl">CSS :</h3>
-          <ul>
-            <li>Sass</li>
-            <li>Tailwind</li>
-          </ul>
-        </div>
+        {technoslist.map((list) => {
+          return (
+            <div key={list.zone} className="py-4 xl:px-12 xl:py-0">
+              <h3 className="text-xl font-semibold xl:mb-2 xl:text-3xl">
+                {list.zone} :
+              </h3>
+              <ul>
+                {list.technos.map((techno) => {
+                  return <li key={`${list.zone}_${techno}`}>{techno}</li>;
+                })}
+              </ul>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 }
+
+type technosListType = {
+  zone: string;
+  technos: string[];
+}[];

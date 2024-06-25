@@ -4,10 +4,10 @@
 
 @keyframes defilement {
   from {
-    right: -336px;
+    right: -616px;
   }
   to {
-    right: 336px;
+    right: 616px;
   }
 }
 
@@ -17,10 +17,10 @@
 
 @keyframes defilementb {
   from {
-    right: 336px;
+    right: 616px;
   }
   to {
-    right: -336px;
+    right: -616px;
   }
 }
 .bghover {

@@ -6,32 +6,14 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Techno } from "@/app/ui/works/techno-avatar";
 
-const fetch = [
-  {
-    title: "titrea",
-    description: "ablablabla",
-    img: "/image.png",
-    alt: "titre du site",
-    technos: ["redux", "react", "nextjs"],
-    link: "#",
-  },
-  {
-    title: "titreb",
-    description: "bblablabla",
-    img: "/image.png",
-    alt: "titre du site",
-    technos: ["redux", "react", "nextjs"],
-    link: "#",
-  },
-  {
-    title: "titrec",
-    description: "cblablabla",
-    img: "/image.png",
-    alt: "titre du site",
-    technos: ["redux", "react", "nextjs"],
-    link: "#",
-  },
-];
+const fetch: {
+  title: string;
+  description: string;
+  img: string;
+  alt: string;
+  technos: string[];
+  link: string;
+}[] = require("@/public/works.json").works;
 
 function Card({
   title,
