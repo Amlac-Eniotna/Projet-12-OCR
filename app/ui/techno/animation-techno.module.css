@@ -1,28 +1,3 @@
-.animation {
-  animation: 20s linear infinite defilement;
-}
-
-@keyframes defilement {
-  from {
-    right: -672px;
-  }
-  to {
-    right: 672px;
-  }
-}
-
-.animationb {
-  animation: 20s linear infinite defilementb;
-}
-
-@keyframes defilementb {
-  from {
-    right: 672px;
-  }
-  to {
-    right: -672px;
-  }
-}
 .bghover {
   background-color: #fafaffdc;
 }

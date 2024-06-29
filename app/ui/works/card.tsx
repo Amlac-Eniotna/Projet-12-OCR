@@ -11,6 +11,7 @@ const fetch: {
   title: string;
   description: string;
   img: string;
+  imgMobile: string;
   alt: string;
   technos: string[];
   github: string;
@@ -22,6 +23,7 @@ function Card({
   description,
   technos,
   img,
+  imgMobile,
   alt,
   link,
   position,
@@ -32,6 +34,7 @@ function Card({
   description: string;
   technos: Array<string>;
   img: string;
+  imgMobile: string;
   alt: string;
   link: string;
   position: string;
@@ -47,7 +50,13 @@ function Card({
           src={img}
           alt={alt}
           fill={true}
-          className="absolute object-cover object-left-top xl:w-[1080px]"
+          className="absolute hidden object-cover object-center min-[850px]:block xl:w-[1080px]"
+        />
+        <Image
+          src={imgMobile}
+          alt={alt}
+          fill={true}
+          className="absolute object-cover object-left-top min-[850px]:hidden xl:w-[1080px]"
         />
       </Link>
       <div
@@ -138,6 +147,7 @@ export function Cards() {
               description={dataCard.description}
               technos={dataCard.technos}
               img={dataCard.img}
+              imgMobile={dataCard.imgMobile}
               alt={dataCard.alt}
               github={dataCard.github}
               id={i}

@@ -1,10 +1,27 @@
+"use client";
+
 import style from "@/app/ui/techno/animation-techno.module.css";
 import { Techno } from "@/app/ui/works/techno-avatar";
+import styled, { keyframes } from "styled-components";
+
 const technos: string[] = require("@/public/technos.json").technos;
 const technoslist: technosListType =
   require("@/public/technos.json").technoslist;
 const repeat = [0, 1, 2, 3, 4];
 const repeatListTechnos = [0, 1];
+
+const defilement = keyframes`
+from {
+  right: ${((technos.length + 1) * 2 * 96 + 16 * technos.length) / 4}px;
+}
+to {
+  right: -${((technos.length + 1) * 2 * 96 + 16 * technos.length) / 4}px;
+}
+`;
+
+const AnimationDiv = styled.div`
+  animation: ${defilement} linear infinite;
+`;
 
 export function GridTechno() {
   function shuffle(array: string[]) {
@@ -14,8 +31,6 @@ export function GridTechno() {
     }
   }
 
-  for (let i = 0; i < 3; i++) {}
-
   return (
     <div
       className={`relative flex h-[75vh] w-full flex-col items-center justify-evenly gap-4 overflow-hidden rounded-3xl bg-wmauve-3 xl:h-[650px] xl:p-8 dark:bg-mauve-3`}
@@ -24,12 +39,13 @@ export function GridTechno() {
       {repeat.map((n) => {
         shuffle(technos);
         return (
-          <div
+          <AnimationDiv
             key={n}
-            className={`${n & 1 ? style.animation : style.animationb} relative flex flex-nowrap justify-between gap-4`}
+            className={`relative flex flex-nowrap justify-between gap-4`}
             style={{
               animationDuration: `${Math.floor(Math.random() * 30) + 10}s`,
               animationDelay: `${Math.floor(Math.random() * 30) - 31}s`,
+              animationDirection: `${n & 1 ? "reverse" : null}`,
             }}
           >
             {repeatListTechnos.map(() =>
@@ -43,7 +59,7 @@ export function GridTechno() {
                 );
               }),
             )}
-          </div>
+          </AnimationDiv>
         );
       })}
     </div>

@@ -3,7 +3,8 @@
     {
       "title": "Responsive IMG",
       "description": "Responsive img permet de créer plusieurs résolutions d'une même image très rapidement et de les convertir au format WEBP.",
-      "img": "/works-image/responsive-img.webp",
+      "img": "/works-image/responsive-img.png",
+      "imgMobile": "/works-image/responsive-img-mobile.png",
       "alt": "Responsive IMG",
       "technos": ["redux", "react", "nextjs", "typescript"],
       "github": "https://github.com/Amlac-Eniotna/responsive_img",
@@ -12,8 +13,9 @@
     {
       "title": "Gîtes - Villa 'nduzienne",
       "description": "Site vitrine pour un gîtes dans les alentours d'Anduze",
-      "img": "/works-image/villaanduze.webp",
-      "alt": "titre du site",
+      "img": "/works-image/villaanduze.png",
+      "imgMobile": "/works-image/villaanduze-mobile.png",
+      "alt": "Villa Anduzienne",
       "technos": ["html", "sass", "javascript"],
       "github": "https://github.com/Amlac-Eniotna/Gites-Octet",
       "link": "https://villaanduze.fr/"
@@ -22,6 +24,7 @@
       "title": "titrec",
       "description": "cblablabla",
       "img": "/image.png",
+      "imgMobile": "/image.png",
       "alt": "titre du site",
       "technos": ["redux", "react", "nextjs"],
       "github": "#",
