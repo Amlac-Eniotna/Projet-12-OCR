@@ -45,7 +45,7 @@ function Card({
     <div
       className={`${position} card-movement relative mx-3 h-[690px] max-h-[82vh] w-full overflow-hidden rounded-3xl bg-wmauve-3 object-cover shadow-2xl xl:min-w-[1256px] dark:border-none dark:bg-mauve-3 dark:shadow-none`}
     >
-      <Link href={link} className="absolute h-full w-full">
+      <Link target="_blank" href={link} className="absolute h-full w-full">
         <Image
           src={img}
           alt={alt}
@@ -60,11 +60,13 @@ function Card({
         />
       </Link>
       <div
-        className={`${style.textshadow} absolute bottom-0 flex h-1/4 w-full justify-between bg-wmauve-2 p-5 opacity-90 xl:p-5 dark:bg-mauve-4`}
+        className={`${style.textshadow} absolute bottom-0 flex min-h-[25%] w-full justify-between gap-2 bg-wmauve-2 p-5 opacity-90 dark:bg-mauve-4`}
       >
         <div>
-          <h2 className="text-base font-medium xl:text-3xl">{title} :</h2>
-          <p className="text-xs xl:text-xl">{description}</p>
+          <h2 className="text-lg font-medium sm:text-2xl xl:text-3xl">
+            {title} :
+          </h2>
+          <p className="text-sm sm:text-base xl:text-xl">{description}</p>
         </div>
         <div>
           <div
@@ -76,12 +78,13 @@ function Card({
                 <Techno
                   key={techno + id}
                   techno={techno}
-                  className="size-9 xl:size-12"
+                  className="size-9 sm:size-12"
                 />
               );
             })}
           </div>
           <Link
+            target="_blank"
             href={github}
             className="block w-full whitespace-nowrap text-right text-indigo-400 underline"
           >

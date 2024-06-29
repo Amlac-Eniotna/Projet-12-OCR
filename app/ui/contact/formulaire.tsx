@@ -55,7 +55,7 @@ export function Formular() {
         <div className="flex flex-col justify-between gap-2 xl:flex-row xl:gap-6">
           <div className="w-full">
             <label
-              className="whitespace-nowrap text-sm xl:text-xl"
+              className="whitespace-nowrap text-sm sm:text-xl"
               htmlFor="email"
             >
               Email :
@@ -70,7 +70,7 @@ export function Formular() {
           </div>
           <div className="w-full">
             <label
-              className="whitespace-nowrap text-sm xl:text-xl"
+              className="whitespace-nowrap text-sm sm:text-xl"
               htmlFor="name"
             >
               Nom complet :
@@ -86,7 +86,7 @@ export function Formular() {
         </div>
         <div className="w-full">
           <label
-            className="whitespace-nowrap text-sm xl:text-xl"
+            className="whitespace-nowrap text-sm sm:text-xl"
             htmlFor="objet"
           >
             Objet :
@@ -101,7 +101,7 @@ export function Formular() {
         </div>
         <div className="flex h-full flex-col">
           <label
-            className="whitespace-nowrap text-sm xl:text-xl"
+            className="whitespace-nowrap text-sm sm:text-xl"
             htmlFor="message"
           >
             Message :
@@ -116,7 +116,7 @@ export function Formular() {
         <div className="flex justify-end">
           <button
             type="submit"
-            className="mb-2 rounded bg-wmauve-9 p-1 px-24 py-2 text-base text-wmauve-1 xl:mb-6 xl:text-2xl dark:bg-mauve-9"
+            className="mb-2 rounded bg-wmauve-9 p-1 px-24 py-2 text-base text-wmauve-1 sm:text-xl xl:mb-6 xl:text-2xl dark:bg-mauve-9"
           >
             {sending ? "Envoi..." : "Envoyer"}
           </button>

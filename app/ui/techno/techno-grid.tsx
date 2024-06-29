@@ -75,12 +75,16 @@ function OverlayTechno() {
         {technoslist.map((list) => {
           return (
             <div key={list.zone} className="py-4 xl:px-12 xl:py-0">
-              <h3 className="text-xl font-semibold xl:mb-2 xl:text-3xl">
+              <h3 className="text-xl font-semibold sm:text-2xl xl:mb-2 xl:text-3xl">
                 {list.zone} :
               </h3>
               <ul>
                 {list.technos.map((techno) => {
-                  return <li key={`${list.zone}_${techno}`}>{techno}</li>;
+                  return (
+                    <li className="sm:text-xl" key={`${list.zone}_${techno}`}>
+                      {techno}
+                    </li>
+                  );
                 })}
               </ul>
             </div>

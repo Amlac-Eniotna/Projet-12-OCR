@@ -5,7 +5,7 @@ export default function MyName({ className }: { className: string }) {
     <>
       <h1 className="sr-only">Antoine Calma</h1>
       <h1
-        className={`${className} ${playfair.className} relative whitespace-nowrap text-4xl text-wmauve-11 xl:text-8xl dark:text-mauve-11`}
+        className={`${className} ${playfair.className} relative whitespace-nowrap text-4xl text-wmauve-11 sm:text-7xl xl:text-8xl dark:text-mauve-11`}
       >
         <div className="appear-text relative">
           <span className="letter-weight-animation animation-delay-1">A</span>
