@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { Arrow } from "@/app/ui/works/arrow";
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { Techno } from "@/app/ui/works/techno-avatar";
 import style from "@/app/ui/works/card.module.css";
+import { Techno } from "@/app/ui/works/techno-avatar";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const fetch: {
   title: string;
@@ -50,13 +50,13 @@ function Card({
           src={img}
           alt={alt}
           fill={true}
-          className="absolute hidden object-cover object-center min-[850px]:block xl:w-[1080px]"
+          className="absolute hidden object-cover object-top min-[850px]:block xl:w-[1080px]"
         />
         <Image
           src={imgMobile}
           alt={alt}
           fill={true}
-          className="absolute object-cover object-left-top min-[850px]:hidden xl:w-[1080px]"
+          className="absolute object-cover object-top min-[850px]:hidden xl:w-[1080px]"
         />
       </Link>
       <div
@@ -97,26 +97,23 @@ function Card({
 }
 
 export function Cards() {
-  const [selected, setSelected] = useState(1);
-  const [position, setPosition] = useState("left-[0px]");
+  const [selected, setSelected] = useState(0);
+  const [position, setPosition] = useState("left-[656px]");
   useEffect(() => {
     switch (selected) {
       case 0:
-        setPosition("xl:left-[1312px]");
+        setPosition("xl:left-[656px]");
         break;
       case 1:
-        setPosition("xl:left-[0px]");
-        break;
-      case 2:
-        setPosition("xl:left-[-1312px]");
+        setPosition("xl:left-[-656px]");
         break;
     }
   }, [selected]);
   const clickHandler = (direction: number) => {
     setSelected(selected + direction);
     if (selected === 0 && direction === -1) {
-      setSelected(2);
-    } else if (selected === 2 && direction === 1) {
+      setSelected(fetch.length - 1);
+    } else if (selected === fetch.length - 1 && direction === 1) {
       setSelected(0);
     }
   };

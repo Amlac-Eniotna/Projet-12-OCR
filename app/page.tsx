@@ -1,10 +1,10 @@
-import Picture from "@/app/ui/me/picture";
-import MyName from "@/app/ui/me/my-name";
-import { Cards } from "@/app/ui/works/card";
 import { playfair } from "@/app/ui/fonts";
+import MyName from "@/app/ui/me/my-name";
+import Picture from "@/app/ui/me/picture";
+import { Cards } from "@/app/ui/works/card";
 // import { Game } from "@/app/ui/techno/game";
-import { GridTechno } from "@/app/ui/techno/techno-grid";
 import { Formular } from "@/app/ui/contact/formulaire";
+import { GridTechno } from "@/app/ui/techno/techno-grid";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
             <MyName className="mb-2" />
             <p className="text-justify text-base font-light sm:text-xl xl:text-start xl:text-3xl">
               {
-                "Je suis développeur front-end junior, formé chez OpenClassrooms. Passionné par la programmation, le design et les nouvelles technologies, je me suis orienté vers le langage JS. En dehors du développement, j'aime jouer du violon et dessiner."
+                "Je suis développeur front-end junior, formé chez OpenClassrooms en tant qu'intégrateur web. Passionné par la programmation, le design et les nouvelles technologies, je me suis orienté vers le langage JS. En dehors du développement, j'aime jouer du violon et dessiner."
               }
             </p>
           </div>
