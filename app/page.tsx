@@ -49,7 +49,7 @@ export default function Home() {
             <h2
               className={`${playfair.className} mb-2 w-40 border-b-2 border-wmauve-11 text-4xl font-black text-wmauve-11 sm:text-7xl xl:mb-6 xl:w-96 xl:border-b-4 xl:text-6xl dark:border-mauve-11 dark:text-mauve-11`}
             >
-              Techno
+              Technos
             </h2>
           </div>
         </div>
